@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolioManju/static/css/main.37222e30.css",
+    "main.js": "/portfolioManju/static/js/main.47ba0538.js",
+    "static/js/453.60cec021.chunk.js": "/portfolioManju/static/js/453.60cec021.chunk.js",
+    "index.html": "/portfolioManju/index.html",
+    "main.37222e30.css.map": "/portfolioManju/static/css/main.37222e30.css.map",
+    "main.47ba0538.js.map": "/portfolioManju/static/js/main.47ba0538.js.map",
+    "453.60cec021.chunk.js.map": "/portfolioManju/static/js/453.60cec021.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37222e30.css",
+    "static/js/main.47ba0538.js"
+  ]
+}
