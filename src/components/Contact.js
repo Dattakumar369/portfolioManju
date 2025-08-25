@@ -36,13 +36,13 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: "📧",
+      icon: "✉️",
       label: "Email",
       value: "manju.voda098@gmail.com",
       link: "mailto:manju.voda098@gmail.com"
     },
     {
-      icon: "📱",
+      icon: "📞",
       label: "Phone",
       value: "+(91)-6309320161",
       link: "tel:+916309320161"
@@ -54,7 +54,7 @@ const Contact = () => {
       link: null
     },
     {
-      icon: "💼",
+      icon: "🔗",
       label: "LinkedIn",
       value: "linkedin.com/in/voda-manju",
       link: "https://linkedin.com/in/voda-manju"
@@ -93,24 +93,6 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
-            </div>
-            
-            <div className="social-links">
-              <h4>Follow Me</h4>
-              <div className="social-icons">
-                <a href="https://github.com/voda-manju" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <span>🐙</span>
-                </a>
-                <a href="https://twitter.com/voda_manju" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <span>🐦</span>
-                </a>
-                <a href="https://linkedin.com/in/voda-manju" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <span>💼</span>
-                </a>
-                <a href="mailto:manju.voda098@gmail.com" className="social-icon">
-                  <span>📧</span>
-                </a>
-              </div>
             </div>
           </div>
           
