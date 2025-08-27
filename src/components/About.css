@@ -34,7 +34,7 @@
 }
 
 .about-subtitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 25px;
@@ -397,63 +397,25 @@
   line-height: 1.4;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .about-main {
-    gap: 60px;
-  }
-  
-  .about-image {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .image-placeholder {
-    width: 240px;
-    height: 240px;
-    font-size: 6rem;
-  }
-  
-  .image-decoration {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-@media (max-width: 992px) {
+/* Responsive Design - Compact Mobile Layout */
+@media (max-width: 768px) {
   .about-main {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 60px;
-  }
-  
-  .about-highlights {
-    max-width: 600px;
-    margin: 40px auto 0;
-  }
-  
-  .languages-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-main {
     gap: 50px;
+    margin-bottom: 70px;
   }
   
   .about-subtitle {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   .about-description {
     font-size: 1rem;
+  }
+  
+  .about-highlights {
+    gap: 20px;
   }
   
   .highlight-item {
@@ -462,63 +424,16 @@
   }
   
   .highlight-icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
   
   .highlight-content h4 {
     font-size: 1.1rem;
   }
   
-  .education-title,
-  .languages-title {
-    font-size: 2.2rem;
-  }
-  
-  .education-item {
-    padding: 25px;
-    gap: 20px;
-  }
-  
-  .education-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .education-content h4 {
-    font-size: 1.2rem;
-  }
-  
-  .languages-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .language-item {
-    padding: 25px 20px;
-  }
-  
-  .language-flag {
-    font-size: 2.5rem;
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
-  
-  .stat-card {
-    padding: 30px 20px;
-  }
-  
-  .stat-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-  }
-  
-  .stat-number {
-    font-size: 2.5rem;
+  .highlight-content p {
+    font-size: 0.9rem;
   }
   
   .about-image {
@@ -536,42 +451,11 @@
     width: 300px;
     height: 300px;
   }
-}
-
-@media (max-width: 480px) {
-  .about-main {
-    gap: 40px;
-  }
-  
-  .about-subtitle {
-    font-size: 1.6rem;
-  }
-  
-  .about-description {
-    font-size: 0.95rem;
-  }
-  
-  .highlight-item {
-    padding: 18px;
-    gap: 12px;
-  }
-  
-  .highlight-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .highlight-content h4 {
-    font-size: 1rem;
-  }
-  
-  .highlight-content p {
-    font-size: 0.9rem;
-  }
   
   .education-title,
   .languages-title {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
   
   .education-item {
@@ -589,48 +473,98 @@
   }
   
   .education-school {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   
   .education-period {
-    font-size: 0.85rem;
-  }
-  
-  .education-grade {
-    padding: 5px 12px;
     font-size: 0.8rem;
   }
   
+  .education-grade {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+  }
+  
   .languages-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
   .language-item {
-    padding: 25px 20px;
+    padding: 20px 15px;
   }
   
   .language-flag {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .language-info h4 {
+    font-size: 1rem;
+  }
+  
+  .language-info p {
+    font-size: 0.85rem;
   }
   
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
   .stat-card {
-    padding: 25px 20px;
+    padding: 25px 15px;
   }
   
   .stat-icon {
     width: 45px;
     height: 45px;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
   }
   
   .stat-number {
     font-size: 2.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-main {
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .about-description {
+    font-size: 0.95rem;
+  }
+  
+  .about-highlights {
+    gap: 15px;
+  }
+  
+  .highlight-item {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .highlight-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .highlight-content h4 {
+    font-size: 1rem;
+  }
+  
+  .highlight-content p {
+    font-size: 0.85rem;
   }
   
   .about-image {
@@ -647,5 +581,100 @@
   .image-decoration {
     width: 250px;
     height: 250px;
+  }
+  
+  .education-title,
+  .languages-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .education-item {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .education-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .education-content h4 {
+    font-size: 1rem;
+  }
+  
+  .education-school {
+    font-size: 0.85rem;
+  }
+  
+  .education-period {
+    font-size: 0.75rem;
+  }
+  
+  .education-grade {
+    padding: 3px 10px;
+    font-size: 0.7rem;
+  }
+  
+  .languages-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .language-item {
+    padding: 15px 10px;
+  }
+  
+  .language-flag {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .language-info h4 {
+    font-size: 0.9rem;
+  }
+  
+  .language-info p {
+    font-size: 0.8rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .stat-card {
+    padding: 20px 10px;
+  }
+  
+  .stat-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-main {
+    gap: 60px;
+  }
+  
+  .about-highlights {
+    max-width: 600px;
+    margin: 40px auto 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-main {
+    gap: 80px;
   }
 }

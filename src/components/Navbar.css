@@ -7,26 +7,26 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  padding: 15px 0;
+  padding: 12px 0;
 }
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .navbar-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar-logo span {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-background-clip: text;
@@ -35,9 +35,28 @@
 }
 
 .navbar-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  padding: 25px 20px;
+  gap: 20px;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-menu.active {
   display: flex;
-  gap: 30px;
-  align-items: center;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .navbar-menu button {
@@ -50,18 +69,23 @@
   position: relative;
   font-size: 1rem;
   font-family: inherit;
-  padding: 0;
+  padding: 12px 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .navbar-menu button:hover {
   color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
 }
 
 .navbar-menu button::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 0;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -69,18 +93,19 @@
 }
 
 .navbar-menu button:hover::after {
-  width: 100%;
+  width: 60%;
 }
 
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
   gap: 4px;
+  padding: 5px;
 }
 
 .hamburger span {
-  width: 25px;
+  width: 22px;
   height: 3px;
   background: #4a5568;
   transition: all 0.3s ease;
@@ -99,31 +124,110 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-@media (max-width: 768px) {
-  .navbar-menu {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    padding: 30px 20px;
-    gap: 20px;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+/* Responsive Design - Mobile First */
+@media (min-width: 480px) {
+  .navbar {
+    padding: 15px 0;
   }
+  
+  .navbar.scrolled {
+    padding: 10px 0;
+  }
+  
+  .navbar-container {
+    padding: 0 20px;
+  }
+  
+  .navbar-logo span {
+    font-size: 1.4rem;
+  }
+  
+  .navbar-menu {
+    top: 70px;
+    padding: 30px 25px;
+    gap: 25px;
+  }
+  
+  .navbar-menu button {
+    padding: 15px 0;
+    font-size: 1.05rem;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+  }
+}
 
-  .navbar-menu.active {
-    transform: translateY(0);
+@media (min-width: 768px) {
+  .navbar {
+    padding: 15px 0;
+  }
+  
+  .navbar.scrolled {
+    padding: 10px 0;
+  }
+  
+  .navbar-container {
+    padding: 0 20px;
+  }
+  
+  .navbar-logo span {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 30px;
+    transform: none;
     opacity: 1;
     visibility: visible;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
   }
-
+  
+  .navbar-menu button {
+    padding: 0;
+    text-align: left;
+    width: auto;
+    border-radius: 0;
+  }
+  
+  .navbar-menu button:hover {
+    background: none;
+  }
+  
+  .navbar-menu button::after {
+    bottom: -5px;
+    left: 0;
+    transform: none;
+  }
+  
+  .navbar-menu button:hover::after {
+    width: 100%;
+  }
+  
   .hamburger {
-    display: flex;
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-container {
+    padding: 0 25px;
+  }
+  
+  .navbar-menu {
+    gap: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-container {
+    padding: 0 30px;
   }
 }

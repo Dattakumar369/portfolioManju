@@ -28,18 +28,18 @@ body {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 25px;
 }
 
 /* Professional Section Headers */
 .section-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   position: relative;
 }
 
 .section-header h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(135deg, #1a1a1a 0%, #4a5568 100%);
   -webkit-background-clip: text;
@@ -51,7 +51,7 @@ body {
 }
 
 .section-header p {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #64748b;
   max-width: 700px;
   margin: 0 auto;
@@ -64,7 +64,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 32px;
+  padding: 15px 30px;
   border: none;
   border-radius: 12px;
   font-size: 1rem;
@@ -123,7 +123,7 @@ body {
 
 /* Professional Section System */
 section {
-  padding: 120px 0;
+  padding: 100px 0;
   position: relative;
 }
 
@@ -134,7 +134,7 @@ section:nth-child(even) {
 /* Professional Grid System */
 .professional-grid {
   display: grid;
-  gap: 40px;
+  gap: 35px;
 }
 
 .professional-grid-2 {
@@ -153,7 +153,7 @@ section:nth-child(even) {
 .professional-card {
   background: white;
   border-radius: 20px;
-  padding: 40px;
+  padding: 35px 30px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
   border: 1px solid rgba(226, 232, 240, 0.8);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -185,7 +185,7 @@ section:nth-child(even) {
 
 /* Professional Typography */
 .professional-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 20px;
@@ -194,7 +194,7 @@ section:nth-child(even) {
 }
 
 .professional-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #64748b;
   margin-bottom: 30px;
   font-weight: 500;
@@ -267,38 +267,8 @@ section:nth-child(even) {
   animation: fadeInRight 0.8s ease-out;
 }
 
-/* Professional Responsive Design */
-@media (max-width: 1200px) {
-  .container {
-    max-width: 1200px;
-    padding: 0 30px;
-  }
-  
-  .professional-grid-4 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .container {
-    padding: 0 25px;
-  }
-  
-  .section-header h2 {
-    font-size: 3rem;
-  }
-  
-  .professional-grid-3,
-  .professional-grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  section {
-    padding: 100px 0;
-  }
-}
-
-@media (max-width: 768px) {
+/* Professional Responsive Design - Desktop-like on Mobile */
+@media (max-width: 480px) {
   .container {
     padding: 0 20px;
   }
@@ -311,16 +281,6 @@ section:nth-child(even) {
     font-size: 1.1rem;
   }
   
-  .professional-grid-2,
-  .professional-grid-3,
-  .professional-grid-4 {
-    grid-template-columns: 1fr;
-  }
-  
-  .professional-card {
-    padding: 30px 25px;
-  }
-  
   .btn {
     padding: 14px 28px;
     font-size: 0.95rem;
@@ -329,31 +289,187 @@ section:nth-child(even) {
   section {
     padding: 80px 0;
   }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 15px;
+  
+  .professional-card {
+    padding: 30px 25px;
   }
   
-  .section-header h2 {
-    font-size: 2.2rem;
+  .professional-title {
+    font-size: 2rem;
   }
   
-  .section-header p {
+  .professional-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .professional-text {
     font-size: 1rem;
   }
   
-  .professional-card {
-    padding: 25px 20px;
+  .professional-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
+  .professional-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .professional-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .section-header h2 {
+    font-size: 2.8rem;
+  }
+  
+  .section-header p {
+    font-size: 1.15rem;
+  }
+  
+  .section-header {
+    margin-bottom: 60px;
+  }
+  
+  .professional-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .professional-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .professional-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .professional-grid {
+    gap: 30px;
+  }
+  
+  .professional-card {
+    padding: 30px 25px;
+  }
+  
+  .professional-title {
+    font-size: 2.1rem;
+  }
+  
+  .professional-subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .professional-text {
+    font-size: 1.05rem;
   }
   
   section {
-    padding: 60px 0;
+    padding: 90px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 25px;
+  }
+  
+  .section-header h2 {
+    font-size: 3rem;
+  }
+  
+  .section-header p {
+    font-size: 1.2rem;
+  }
+  
+  .section-header {
+    margin-bottom: 70px;
+  }
+  
+  .professional-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .professional-grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .professional-grid {
+    gap: 35px;
+  }
+  
+  .professional-card {
+    padding: 35px 30px;
+  }
+  
+  .professional-title {
+    font-size: 2.2rem;
+  }
+  
+  .professional-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .professional-text {
+    font-size: 1.1rem;
+  }
+  
+  section {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 3.2rem;
+  }
+  
+  .section-header p {
+    font-size: 1.25rem;
+  }
+  
+  .section-header {
+    margin-bottom: 80px;
+  }
+  
+  .professional-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .professional-grid {
+    gap: 40px;
+  }
+  
+  .professional-card {
+    padding: 40px;
+  }
+  
+  .professional-title {
+    font-size: 2.3rem;
+  }
+  
+  .professional-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .professional-text {
+    font-size: 1.1rem;
+  }
+  
+  section {
+    padding: 110px 0;
+  }
+  
+  .btn {
+    padding: 16px 32px;
+    font-size: 1rem;
   }
 }

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,12 +14,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -29,19 +33,16 @@ const Navbar = () => {
           <span>Voda Manju</span>
         </div>
         
-        <div className={`navbar-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-          <button onClick={() => scrollToSection('hero')}>Home</button>
+        <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+          <button onClick={() => scrollToSection('home')}>Home</button>
           <button onClick={() => scrollToSection('about')}>About</button>
           <button onClick={() => scrollToSection('skills')}>Skills</button>
           <button onClick={() => scrollToSection('projects')}>Projects</button>
           <button onClick={() => scrollToSection('experience')}>Experience</button>
           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </div>
-
-        <div 
-          className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
+        
+        <div className={`hamburger ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>

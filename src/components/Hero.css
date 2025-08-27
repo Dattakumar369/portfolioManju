@@ -41,7 +41,7 @@
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
   position: relative;
   z-index: 2;
@@ -71,7 +71,7 @@
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
@@ -117,7 +117,7 @@
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 25px;
   margin-bottom: 50px;
 }
 
@@ -193,23 +193,23 @@
 
 .hero-avatar {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .avatar-image {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   backdrop-filter: blur(20px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8rem;
+  font-size: 7rem;
   border: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   z-index: 3;
@@ -221,8 +221,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 320px;
-  height: 320px;
+  width: 360px;
+  height: 360px;
   border: 2px solid rgba(96, 165, 250, 0.3);
   border-radius: 50%;
   animation: rotate 20s linear infinite;
@@ -233,8 +233,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 350px;
-  height: 350px;
+  width: 390px;
+  height: 390px;
   border: 2px solid rgba(167, 139, 250, 0.2);
   border-radius: 50%;
   animation: rotate 15s linear infinite reverse;
@@ -331,50 +331,49 @@
   }
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .hero-content {
-    gap: 60px;
-  }
-  
-  .hero-title {
-    font-size: 3.5rem;
-  }
-  
-  .hero-avatar {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .avatar-image {
-    width: 240px;
-    height: 240px;
-    font-size: 6rem;
-  }
-}
-
-@media (max-width: 992px) {
+/* Responsive Design - Desktop-like on Mobile */
+@media (max-width: 768px) {
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 60px;
+    gap: 50px;
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
   }
   
   .hero-description {
+    font-size: 1.1rem;
     margin: 0 auto 40px;
   }
   
   .hero-stats {
-    max-width: 500px;
+    max-width: 400px;
     margin: 0 auto 50px;
+    gap: 20px;
+  }
+  
+  .stat-item {
+    padding: 18px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
   }
   
   .hero-actions {
     justify-content: center;
+    gap: 15px;
+  }
+  
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    min-width: 160px;
   }
   
   .hero-avatar {
@@ -385,26 +384,50 @@
   .avatar-image {
     width: 220px;
     height: 220px;
-    font-size: 5rem;
+    font-size: 6rem;
+  }
+  
+  .avatar-ring {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .avatar-ring-2 {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .floating-icon {
+    font-size: 1.5rem;
+  }
+  
+  .hero-scroll-indicator {
+    bottom: 30px;
+  }
+  
+  .scroll-text {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hero-title {
     font-size: 2.5rem;
   }
   
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   
   .hero-stats {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
+    max-width: 350px;
   }
   
   .stat-item {
@@ -434,45 +457,7 @@
   .avatar-image {
     width: 200px;
     height: 200px;
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .hero-description {
-    font-size: 1rem;
-  }
-  
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  
-  .stat-item {
-    padding: 12px;
-  }
-  
-  .stat-number {
-    font-size: 1.8rem;
-  }
-  
-  .hero-avatar {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .avatar-image {
-    width: 160px;
-    height: 160px;
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
   
   .avatar-ring {
@@ -484,4 +469,9 @@
     width: 300px;
     height: 300px;
   }
+  
+  .floating-icon {
+    font-size: 1.3rem;
+  }
 }
+

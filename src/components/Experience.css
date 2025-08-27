@@ -1,5 +1,6 @@
 .experience {
   background: #f7fafc;
+  padding: 80px 0;
 }
 
 .experience-content {
@@ -94,6 +95,7 @@
   color: #4a5568;
   line-height: 1.6;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
 .achievements h5 {
@@ -113,6 +115,7 @@
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
+  font-size: 0.95rem;
 }
 
 .achievements li::before {
@@ -185,6 +188,7 @@
 .education-item p {
   color: #4a5568;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 .extra-activities {
@@ -289,14 +293,30 @@
   font-weight: 500;
 }
 
-/* Responsive Design */
+/* Responsive Design - Compact Mobile Layout */
 @media (max-width: 768px) {
+  .experience {
+    padding: 60px 0;
+  }
+  
+  .experience-content {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .work-experience h3,
+  .education h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
   .timeline::before {
     left: 15px;
   }
   
   .timeline-item {
-    padding-left: 50px;
+    padding-left: 45px;
+    margin-bottom: 30px;
   }
   
   .timeline-marker {
@@ -305,64 +325,76 @@
     height: 18px;
   }
   
-  .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  
-  .work-experience h3,
-  .education h3 {
-    font-size: 1.8rem;
-  }
-  
-  .summary-card {
-    padding: 30px 20px;
-  }
-  
-  .summary-card h4 {
-    font-size: 1.5rem;
-  }
-  
-  .extra-activities h3 {
-    font-size: 1.8rem;
-  }
-  
-  .activities-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .timeline::before {
-    left: 10px;
-  }
-  
-  .timeline-item {
-    padding-left: 40px;
-  }
-  
-  .timeline-marker {
-    left: 1px;
-    width: 16px;
-    height: 16px;
-  }
-  
-  .highlights-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-  
-  .highlight-number {
-    font-size: 2rem;
+  .timeline-content {
+    padding: 20px;
   }
   
   .position {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .company {
     font-size: 1rem;
+  }
+  
+  .period {
+    font-size: 0.85rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+  
+  .achievements h5 {
+    font-size: 0.95rem;
+  }
+  
+  .achievements li {
+    font-size: 0.9rem;
+  }
+  
+  .tech-tag {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .education-items {
+    gap: 25px;
+  }
+  
+  .education-item {
+    padding: 20px;
+  }
+  
+  .education-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .education-header .school {
+    font-size: 1rem;
+  }
+  
+  .education-header .period {
+    font-size: 0.85rem;
+  }
+  
+  .education-item p {
+    font-size: 0.9rem;
+  }
+  
+  .extra-activities {
+    margin-bottom: 40px;
+  }
+  
+  .extra-activities h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .activities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
   }
   
   .activity-item {
@@ -373,5 +405,187 @@
     width: 45px;
     height: 45px;
     font-size: 1.2rem;
+  }
+  
+  .activity-text {
+    font-size: 1rem;
+  }
+  
+  .summary-card {
+    padding: 30px 20px;
+  }
+  
+  .summary-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .highlight-number {
+    font-size: 2.2rem;
+  }
+  
+  .highlight-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 50px 0;
+  }
+  
+  .experience-content {
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .work-experience h3,
+  .education h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .timeline::before {
+    left: 12px;
+  }
+  
+  .timeline-item {
+    padding-left: 35px;
+    margin-bottom: 25px;
+  }
+  
+  .timeline-marker {
+    left: 3px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .timeline-content {
+    padding: 15px;
+  }
+  
+  .position {
+    font-size: 1.1rem;
+  }
+  
+  .company {
+    font-size: 0.95rem;
+  }
+  
+  .period {
+    font-size: 0.8rem;
+  }
+  
+  .description {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+  
+  .achievements h5 {
+    font-size: 0.9rem;
+  }
+  
+  .achievements li {
+    font-size: 0.85rem;
+  }
+  
+  .tech-tag {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+  
+  .education-items {
+    gap: 20px;
+  }
+  
+  .education-item {
+    padding: 15px;
+  }
+  
+  .education-header h4 {
+    font-size: 1.1rem;
+  }
+  
+  .education-header .school {
+    font-size: 0.95rem;
+  }
+  
+  .education-header .period {
+    font-size: 0.8rem;
+  }
+  
+  .education-item p {
+    font-size: 0.85rem;
+  }
+  
+  .extra-activities {
+    margin-bottom: 30px;
+  }
+  
+  .extra-activities h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .activities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .activity-item {
+    padding: 15px;
+  }
+  
+  .activity-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .activity-text {
+    font-size: 0.9rem;
+  }
+  
+  .summary-card {
+    padding: 25px 15px;
+  }
+  
+  .summary-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .highlight-number {
+    font-size: 2rem;
+  }
+  
+  .highlight-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .experience {
+    padding: 80px 0;
+  }
+  
+  .highlights-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .experience {
+    padding: 80px 0;
   }
 }

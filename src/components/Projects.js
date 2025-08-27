@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Projects.css';
 
 const Projects = () => {
+  // Debug: Log the public URL
+  console.log('Public URL:', process.env.PUBLIC_URL);
+
   const projects = [
     {
       id: 1,
@@ -25,9 +28,9 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "GroceryOL.in - E-commerce Platform",
+      title: "GroceryOL.in",
       description: "A full-stack e-commerce website for grocery shopping built with Spring Boot Java backend, React frontend, and deployed on AWS. Features include user authentication, product management, shopping cart, and secure payment integration.",
-      image: "/groceryol-logo.png",
+      image: `${process.env.PUBLIC_URL}/groceryol-logo.png`,
       category: "web",
       technologies: ["Spring Boot", "Java", "React", "AWS", "MySQL", "REST API"],
       liveUrl: "https://groceryol.in",
@@ -78,6 +81,27 @@ const Projects = () => {
                     src={project.image} 
                     alt={project.title}
                     className="project-logo"
+                    style={{ border: '3px solid red' }}
+                    onLoad={(e) => {
+                      console.log('✅ GroceryOL logo loaded successfully:', project.image);
+                      console.log('📏 Image element:', e.target);
+                      console.log('📐 Natural dimensions:', e.target.naturalWidth, 'x', e.target.naturalHeight);
+                      console.log('🎨 Computed styles:', window.getComputedStyle(e.target));
+                      console.log('🔍 Parent element:', e.target.parentNode);
+                    }}
+                    onError={(e) => {
+                      console.error('❌ Failed to load GroceryOL logo:', e.target.src);
+                      console.error('🚫 Error details:', e);
+                      console.error('🌐 Current URL:', window.location.href);
+                      console.error('📁 Public folder:', process.env.PUBLIC_URL);
+                      console.error('🖼️ Image path being used:', project.image);
+                      e.target.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.className = 'project-icon';
+                      fallback.textContent = '🛒';
+                      fallback.style.border = '3px solid blue';
+                      e.target.parentNode.appendChild(fallback);
+                    }}
                   />
                 ) : (
                   <div className="project-icon">{project.image}</div>
@@ -107,10 +131,8 @@ const Projects = () => {
         </div>
         
         <div className="projects-cta">
-          <p>Interested in working together?</p>
-          <button className="btn btn-primary" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
-            Let's Talk
-          </button>
+          <p>Interested in working together? Let's discuss your project!</p>
+          <a href="#contact" className="btn btn-primary">Get In Touch</a>
         </div>
       </div>
     </section>

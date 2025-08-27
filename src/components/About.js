@@ -162,51 +162,6 @@ const About = () => {
               </div>
             </div>
           </div>
-          
-          <div className="about-stats">
-            <div className="stats-grid">
-              <div className="stat-card">
-                <div className="stat-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 10v6M2 10l10-5 10 5z"/>
-                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                  </svg>
-                </div>
-                <div className="stat-content">
-                  <span className="stat-number">4+</span>
-                  <span className="stat-label">Years Education</span>
-                </div>
-              </div>
-              
-              <div className="stat-card">
-                <div className="stat-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 0 1 1.946-.806 3.42 3.42 0 0 1 1.946.806 3.42 3.42 0 0 1 .806 1.946 3.42 3.42 0 0 1-.806 1.946 3.42 3.42 0 0 1-1.946.806 3.42 3.42 0 0 1-1.946-.806 3.42 3.42 0 0 1-.806-1.946 3.42 3.42 0 0 1 .806-1.946z"/>
-                  </svg>
-                </div>
-                <div className="stat-content">
-                  <span className="stat-number">4+</span>
-                  <span className="stat-label">Programming Languages</span>
-                </div>
-              </div>
-              
-              <div className="stat-card">
-                <div className="stat-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                    <polyline points="14,2 14,8 20,8"/>
-                    <line x1="16" y1="13" x2="8" y2="13"/>
-                    <line x1="16" y1="17" x2="8" y2="17"/>
-                    <polyline points="10,9 9,9 8,9"/>
-                  </svg>
-                </div>
-                <div className="stat-content">
-                  <span className="stat-number">3+</span>
-                  <span className="stat-label">Projects Completed</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
